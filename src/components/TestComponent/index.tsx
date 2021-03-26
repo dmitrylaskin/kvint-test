@@ -5,7 +5,7 @@ import styles from './switcher.less'
 
 
 const TestComponent: React.FC = () => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState<boolean>(true);
 
   const title = {
     display: 'block',
