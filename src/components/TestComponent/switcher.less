@@ -69,7 +69,7 @@
   &-handle {
     position: absolute;
     top: @switch-padding;
-    left: @switch-padding;
+    left: -10px;
     width: @switch-pin-size;
     height: @switch-pin-size;
     transition: all @switch-duration ease-in-out;
@@ -91,10 +91,10 @@
   }
 
   &-checked &-handle {
-    left: calc(100% - @switch-pin-size - @switch-padding);
+    left: calc(100% - 13px - @switch-padding);
   }
 
-  &:not(&-disabled):active {
+  &:not(&-disabled) {
     .@{switch-prefix-cls}-handle::before {
       right: -30%;
       left: 0;

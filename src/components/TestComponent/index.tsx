@@ -5,7 +5,7 @@ import styles from './switcher.less'
 
 
 const TestComponent: React.FC = () => {
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState<boolean>(true);
 
   const title = {
     display: 'block',
@@ -18,7 +18,7 @@ const TestComponent: React.FC = () => {
 
   return <ComponentWrapper>
     <span style={title}>{toggle ? 'Да' : 'Нет'}</span>
-    <Switch defaultChecked className={styles} onChange={() => setToggle(!toggle)}/>
+    <Switch defaultChecked className={styles} onChange={():void => setToggle(!toggle)}/>
   </ComponentWrapper>;
 };
 
